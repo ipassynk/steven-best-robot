@@ -1,19 +1,76 @@
-<!DOCTYPE html>
+CTYPE html>
 <html>
     <head>
         <style type="text/css"> 
-            body {background-image: url(https://lh3.googleusercontent.com/bKCY7DtTMXlOUhYZGDRaInEaFJ6wkq7rfoLUmlCsz6A=w1920-h1080-rw-no);
+            body {
+            	background-image: url(https://lh3.googleusercontent.com/bKCY7DtTMXlOUhYZGDRaInEaFJ6wkq7rfoLUmlCsz6A=w1920-h1080-rw-no);
+            	background-repeat: no-repeat;
             }
         </style>
-        <title> BEST ROBOT EVER! </title></head>
+        <title> BEST ROBOT EVER! </title>
+
+    </head>
+<body>
+
+
  <h1>Best robot in town!</h1>   
 <p>Best robot in town! Name is 2.0 it is a servant!
-It cost only $300 it is on sael for chistmas!You haf to buy it!
-    You can buy on line</p>
+It cost only $300 it is on sali for chistmas!You have to buy it!
+    You can buy on line
+
+        </p>
+
 
 <img src="http://www.doseofmetal.com/wp-content/uploads/2011/04/borat-thumbs-up.jpg"width="500"height="500"/>
-<img src="http://top5reviews.com/websites/top5reviews/images/integrating_paypal/paypal.png"width="500"height="500"/>
-<a href="https://www.paypal.com/ca/webapps/mpp/home">PayPal</a>
+<img src="https://tctechcrunch2011.files.wordpress.com/2015/10/paypal-earnings.png"width="500"height="500"/>
+<a href="mailto:stevenPassynkov@gmail.com">My Email</a> 
 
-<a href="mailto:stevenPassynkov@gmail.com">My Email</a>    
+
+<div id="container">
+Question:<input type="text" id="questionBox"><br>
+username:<input type="text" id="userernameBox"><br>
+password:<input type="password" id="passwordBox"><br>
+<input type="button" id="answer" value="Answer the qestion!" onclick="showAnswer();">
+                                                                                                <p>Powered by Steven Passynkov</p>
+</div>
+
+
+<script>
+    var password;
+     function showAnswer(){
+     	var password =document.getElementById('passwordBox').value;
+     	var stevenPosition = password.indexOf("steven");
+     	password = password.substring(0, stevenPosition);
+        document.getElementById("container").innerHTML = password;
+     }
+     
+     function buttonClick() {
+         var password =document.getElementById('passwordBox').value;
+         document.getElementById("container").innerHTML = password;
+    }
+</script> 
+
+<textarea id="english"></textarea>
+<br>
+<input type="button" value="Argh!!!" onclick="pirate_talk();"/>
+<br>
+<textarea id="output"></textarea>
+
+<script>
+     function received(json){
+     	  document.getElementById("output").value = json.translation.pirate;
+     	}
+
+     	function pirate_talk(){
+     		var script = document.createElement("script");
+     		var word = document.getElementById("english").value;
+     		script.src = "http://isithackday.com/arrpi.php?format=json&callback=received&text=" + word;
+     		document.body.appendChild(script);
+
+
+     	}
+ </script>
+
+</body>
 </html>
+
